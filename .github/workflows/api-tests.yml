@@ -28,8 +28,8 @@ jobs:
       - name: Publish Allure report
         uses: actions/upload-artifact@v3
         with:
-          name: allure-report
-          path: build/allure-results
+          name: index.html
+          path: build/reports/allure-report/allureReport
 
   deploy:
     name: Publish Allure Report to GitHub Pages
