@@ -51,7 +51,7 @@ jobs:
       - name: Download Allure Report artifact
         uses: actions/download-artifact@v3
         with:
-          name: allure-report
+          name: index.html
 
       - name: Generate Allure report
         run: allure generate allure-report --clean -o allure-report-html
