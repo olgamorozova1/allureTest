@@ -1,0 +1,61 @@
+name: Allure report publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Run API Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+
+      - name: Build and run tests
+        run: |
+          ./gradlew clean test allureReport
+
+      - name: Publish Allure report
+        uses: actions/upload-artifact@v2
+        with:
+          name: allure-report
+          path: build/allure-results
+
+  deploy:
+    name: Publish Allure Report to GitHub Pages
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Allure Command Line
+        run: npm install -g allure-commandline
+
+      - name: Download Allure Report artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: allure-report
+
+      - name: Generate Allure report
+        run: allure generate allure-report --clean -o allure-report-html
+
+      - name: Publish to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report-html
