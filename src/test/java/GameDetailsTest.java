@@ -37,7 +37,7 @@ public class GameDetailsTest {
     @Feature("Game")
     @Story("Get game details")
     public void testGetGenerationByName() {
-        String generationName = "red-blue";
+        String generationName = "red-blue!";
 
         Response response = given()
                 .baseUri(BASE_URL)
