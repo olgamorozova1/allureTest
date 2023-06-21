@@ -1,0 +1,1 @@
+{"ffb764ac3c84255e223b2a0534f8c1d":{"statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1},"items":[{"uid":"8087d97232b96ffc","reportUrl":"https://olgamorozova1.github.io/allureTest/10//#testresult/8087d97232b96ffc","status":"passed","time":{"start":1687373959264,"stop":1687373963591,"duration":4327}}]}}

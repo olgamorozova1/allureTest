@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Jun 21 18:59:19 GMT 2023","Wed Jun 21 18:59:23 GMT 2023","4327","","GameDetailsTest","","GameDetailsTest","testGetGameDetails","Verify game details",""
