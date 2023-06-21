@@ -23,7 +23,7 @@ public class GameDetailsTest {
 
         assertEquals(200, response.statusCode());
 
-        String expectedName = "generation-i";
+        String expectedName = "generation";
         String actualName = response.path("name");
         assertEquals(expectedName, actualName);
     }
