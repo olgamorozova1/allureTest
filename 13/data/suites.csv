@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Jun 21 19:40:50 GMT 2023","Wed Jun 21 19:40:53 GMT 2023","3399","","GameDetailsTest","","GameDetailsTest","testGetGenerationWithInvalidName","Get Generation with Invalid Name",""
+"passed","Wed Jun 21 19:40:53 GMT 2023","Wed Jun 21 19:40:55 GMT 2023","1191","","GameDetailsTest","","GameDetailsTest","testGetGenerationById","Get Generation by ID",""
+"passed","Wed Jun 21 19:40:55 GMT 2023","Wed Jun 21 19:40:55 GMT 2023","63","","GameDetailsTest","","GameDetailsTest","testGetGenerationWithInvalidId","Get Generation with Invalid ID",""
+"failed","Wed Jun 21 19:40:55 GMT 2023","Wed Jun 21 19:40:57 GMT 2023","2002","","GameDetailsTest","","GameDetailsTest","testGetGenerationByName","Get Generation by Name",""
